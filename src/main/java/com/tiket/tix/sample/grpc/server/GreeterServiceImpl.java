@@ -1,8 +1,9 @@
 package com.tiket.tix.sample.grpc.server;
 
-import helloworld.GreeterGrpc.GreeterImplBase;
-import helloworld.HelloWorld.HelloReply;
-import helloworld.HelloWorld.HelloRequest;
+
+import com.github.tarsidi.danesh.grpc.proto.GreeterGrpc.GreeterImplBase;
+import com.github.tarsidi.danesh.grpc.proto.HelloWorld.HelloReply;
+import com.github.tarsidi.danesh.grpc.proto.HelloWorld.HelloRequest;
 import io.grpc.stub.StreamObserver;
 
 public class GreeterServiceImpl extends GreeterImplBase {

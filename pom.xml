@@ -6,7 +6,7 @@
 
   <groupId>com.tiket.tix.sample.grpc</groupId>
   <artifactId>grpc-intro-java-impl</artifactId>
-  <version>1.0.0-0-SNAPSHOT</version>
+  <version>1.0.1</version>
 
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
@@ -16,17 +16,17 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.tiket.tix.sample.grpc</groupId>
-        <artifactId>sample-grpc-lib</artifactId>
-        <version>1.0.0-0-SNAPSHOT</version>
+        <groupId>com.github.tarsidi-danesh</groupId>
+        <artifactId>grpc-intro-java</artifactId>
+        <version>1.0.1</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
     <dependency>
-      <groupId>com.tiket.tix.sample.grpc</groupId>
-      <artifactId>sample-grpc-lib</artifactId>
+      <groupId>com.github.tarsidi-danesh</groupId>
+      <artifactId>grpc-intro-java</artifactId>
     </dependency>
   </dependencies>
 
