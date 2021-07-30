@@ -14,8 +14,12 @@ public class GrpcClient {
         .usePlaintext().build();
 
     GreeterGrpc.GreeterBlockingStub client = GreeterGrpc.newBlockingStub(channel);
-    var helloRequest = HelloRequest.newBuilder().setName("Tarsidi").build();
+    var helloRequest = HelloRequest.newBuilder()
+        .setName("Tarsidi")
+        .setAddress("Ceger")
+        .build();
 
+    System.out.println("send request: "+ helloRequest.getName() + " " + helloRequest.getAddress());
     var helloReply = client.sayHello(helloRequest);
 
     System.out.println(helloReply.getMessage());

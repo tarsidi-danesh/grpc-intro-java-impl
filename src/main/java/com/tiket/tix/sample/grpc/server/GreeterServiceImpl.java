@@ -10,8 +10,9 @@ public class GreeterServiceImpl extends GreeterImplBase {
 
   @Override
   public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-    String requestName = request.getName();
-    HelloReply response = HelloReply.newBuilder().setMessage("Hello " + requestName).build();
+    System.out.println("receiving request: " + request.getName() + ":" + request.getAddress());
+    String responseMessage = "Hello " + request.getName() + " from " + request.getAddress();
+    HelloReply response = HelloReply.newBuilder().setMessage(responseMessage).build();
     responseObserver.onNext(response);
     responseObserver.onCompleted();
   }
